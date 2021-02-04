@@ -1,6 +1,5 @@
 # react-native-samples
 
-## 概要
 ReactNatieのサンプル実装
 
 ## SVG アニメーション
