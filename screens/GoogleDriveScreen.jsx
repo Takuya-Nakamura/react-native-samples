@@ -101,13 +101,14 @@ export default class GoogleDriveScreen extends Component {
     // stateにtokenとrefresh_tokenを保存
 
     const refreshToken = await this.getData('refreshToken')
+    console.log("refreshToken", refreshToken)
     this.setState({ refreshToken: refreshToken })
-
     if (refreshToken) {
       this.refreshWithGoogle(refreshToken)
     } else {
       this.signInWithGoogle()
     }
+
   }
 
   // Google OAuth認証メソッド
@@ -144,6 +145,7 @@ export default class GoogleDriveScreen extends Component {
     fetch(refreshUrl, { method, headers, body })
       .then(response => response.json())
       .then(data => {
+        console.log("data", data)
         this.setData('refreshToken', data.access_token)
         this.setState({
           token: data.access_token,
