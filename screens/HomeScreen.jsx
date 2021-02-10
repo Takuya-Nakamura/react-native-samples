@@ -12,6 +12,7 @@ import { TouchableHighlight, TouchableWithoutFeedback } from 'react-native-gestu
 const list = [
   { screen: 'Sample' },
   { screen: 'SortableList' },
+  { screen: 'GoogleDrive' },
 ];
 
 export default class HomeScreen extends Component {
@@ -35,7 +36,7 @@ export default class HomeScreen extends Component {
               </TouchableWithoutFeedback>
             );
           }}
-          keyExtractor={item => item.todo}
+          keyExtractor={(item, index) => index}
         />
       </SafeAreaView>
     );
