@@ -13,6 +13,9 @@ const list = [
   { screen: 'Sample' },
   { screen: 'SortableList' },
   { screen: 'GoogleDrive' },
+  { screen: 'StickyHeaderList' },
+  { screen: 'Responder' },
+
 ];
 
 export default class HomeScreen extends Component {
